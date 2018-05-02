@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<integer>16</integer>
+	<array>
+		<string>Unknown</string>
+		<string>A</string>
+		<string>B</string>
+		<string>C</string>
+		<string>H</string>
+	</array>
+	<dict>
+		<key>sd</key>
+		<string>Unknown</string>
+		<key>id</key>
+		<integer>16</integer>
+		<key>firstName</key>
+		<string></string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>1</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Công</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>2</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Giang</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>3</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Hùng</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>4</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Oai</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>5</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Phong</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>6</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Quyết</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>7</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Sáng</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>8</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Sơn</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>9</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Thắng</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>10</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Tiến</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>B</string>
+		<key>id</key>
+		<integer>11</integer>
+		<key>firstName</key>
+		<string>Bố</string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>B</string>
+		<key>id</key>
+		<integer>12</integer>
+		<key>firstName</key>
+		<string>Bình</string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>C</string>
+		<key>id</key>
+		<integer>13</integer>
+		<key>firstName</key>
+		<string>Cương</string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>C</string>
+		<key>id</key>
+		<integer>14</integer>
+		<key>firstName</key>
+		<string>Cường</string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>H</string>
+		<key>id</key>
+		<integer>15</integer>
+		<key>firstName</key>
+		<string>Hoàng</string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Nguyễn Trãi</string>
+			<key>city</key>
+			<string>Hà Đông</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+</array>
+</plist>

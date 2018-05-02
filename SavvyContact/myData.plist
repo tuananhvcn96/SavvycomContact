@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<integer>0</integer>
+	<array>
+		<string>Unknown</string>
+		<string>A</string>
+		<string>B</string>
+		<string>C</string>
+		<string>D</string>
+		<string>E</string>
+		<string>F</string>
+		<string>G</string>
+		<string>H</string>
+	</array>
+	<dict>
+		<key>sd</key>
+		<string>Unknown</string>
+		<key>id</key>
+		<integer>16</integer>
+		<key>firstName</key>
+		<string></string>
+		<key>lastName</key>
+		<string></string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>example@abc.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Cầu Diễn</string>
+			<key>city</key>
+			<string>Nhổn</string>
+			<key>state</key>
+			<string>Hà Nội</string>
+			<key>zip</key>
+			<string>29</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+	<dict>
+		<key>group</key>
+		<string>A</string>
+		<key>id</key>
+		<integer>1</integer>
+		<key>firstName</key>
+		<string>A</string>
+		<key>lastName</key>
+		<string>Ánh</string>
+		<key>profileImage</key>
+		<string></string>
+		<key>email</key>
+		<string>anh@gmail.com</string>
+		<key>phoneNumber</key>
+		<string>0983935871</string>
+		<key>address</key>
+		<dict>
+			<key>streetAddress</key>
+			<string>Cầu Diễn</string>
+			<key>city</key>
+			<string>Hà Nội</string>
+			<key>state</key>
+			<string>Hà Nội </string>
+			<key>zip</key>
+			<string>12</string>
+			<key>country</key>
+			<string></string>
+		</dict>
+	</dict>
+</array>
+</plist>
