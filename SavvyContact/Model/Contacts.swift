@@ -54,7 +54,7 @@ struct Address {
         return self.country
     }
     func getAddress() -> String? {
-        return streetAddress + " " + city + " " + state + " " + country + ", Zip: \(zip)"
+        return " " + streetAddress + "\n" + city + "\n" + state + "\n" + country + "\n" + "Zip: \(zip)"
     }
 
 }
@@ -77,34 +77,6 @@ class Contact: ConnectDB  {
         super.init(dataFileName: Contact.dataFileName)
         self.id = getLastId() + 1
     }
-    init?(
-        
-        firstName: String = "0",
-        phoneNumber: String,
-        lastName: String?,
-        profileImage: String?,
-        email: String?,
-        address: Address?
-        ) {
-        super.init(dataFileName: Contact.dataFileName)
-        self.firstName = firstName
-        self.phoneNumber = phoneNumber
-        self.lastName = lastName
-        self.profileImage = profileImage
-        self.email = email
-        self.address = address
-        self.id = getLastId() + 1
-        if self.firstName != "0" {
-            self.group = String(self.firstName.characters.first!)
-            
-        } else if self.lastName != ""{
-            self.group = String((self.lastName?.characters.first!)!)
-        } else {
-            self.group = "Unknown"
-        }
-    }
-
-
     
     /* khoi tao doi tuong Contact lay tu dbase*/
     init?(Dictionary dict: Dictionary<String,Any>) {

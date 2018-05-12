@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class EditContactController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet weak var tableViewInfo: UITableView!
     @IBOutlet weak var tableViewName: UITableView!
@@ -30,15 +30,17 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         self.tableViewName.dataSource = self
         self.tableViewName.delegate = self
         super.viewDidLoad()
+    
         
         if !contact.isEmpty {
-            let path = contact["prolileImage"] as! String
+            let path = contact["profileImage"] as! String
             if path != "" {
                 photoImageView.image = UIImage(contentsOfFile: path)
                 Helper.roundImage(photoImageView)
             }
         }
         newPhoto.image = photoImageView.image
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +54,86 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         dismiss(animated: true, completion: nil)
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
+    }
+    
+    func addEmailCell(_ cell: UITableViewCell){
+        let lbl = UILabel()
+        let tfEmailAdd = UITextField()
+        let color1 = hexStringToUIColor(hex: "#78f5ff")
+        
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        tfEmailAdd.translatesAutoresizingMaskIntoConstraints = false
+        
+        lbl.text = "Email"
+        lbl.textColor = color1
+        
+        tfEmailAdd.placeholder = "Email"
+        tfEmailAdd.text = contact["email"] as? String
+        tfEmailAdd.borderStyle = .roundedRect
+        
+        cell.contentView.addSubview(lbl)
+        cell.contentView.addSubview(tfEmailAdd)
+        
+        NSLayoutConstraint.activate([
+            lbl.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 20),
+            lbl.topAnchor.constraint(equalTo: cell.topAnchor, constant: 20),
+            lbl.trailingAnchor.constraint(equalTo: tfEmailAdd.leadingAnchor, constant: -13),
+            
+            tfEmailAdd.topAnchor.constraint(equalTo: cell.topAnchor, constant: 16),
+            tfEmailAdd.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 96),
+            tfEmailAdd.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -17),
+            ])
+        
+        tfEmailAdd.delegate = self
+        tfEmailAdd.tag = 0
+        tfEmailAdd.returnKeyType = UIReturnKeyType.next
+    }
+    
+    func addPhoneCell(_ cell: UITableViewCell){
+        
+        let color1 = hexStringToUIColor(hex: "#78f5ff")
+
+        let lbl = UILabel()
+        let tfPhoneAdd = UITextField()
+        
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        tfPhoneAdd.translatesAutoresizingMaskIntoConstraints = false
+        
+        lbl.text = "Phone"
+        lbl.textColor = color1
+        
+        tfPhoneAdd.placeholder = "Phone"
+        tfPhoneAdd.text = contact["phoneNumber"] as? String
+        tfPhoneAdd.borderStyle = .roundedRect
+        
+        cell.contentView.addSubview(lbl)
+        cell.contentView.addSubview(tfPhoneAdd)
+        
+        NSLayoutConstraint.activate([
+            lbl.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 20),
+            lbl.topAnchor.constraint(equalTo: cell.topAnchor, constant: 20),
+            lbl.trailingAnchor.constraint(equalTo: tfPhoneAdd.leadingAnchor, constant: -13),
+            
+            tfPhoneAdd.topAnchor.constraint(equalTo: cell.topAnchor, constant: 16),
+            tfPhoneAdd.leadingAnchor.constraint(equalTo: cell.leadingAnchor, constant: 96),
+            tfPhoneAdd.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -17),
+        ])
+        
+        tfPhoneAdd.delegate = self
+        tfPhoneAdd.tag = 1
+        tfPhoneAdd.returnKeyType = UIReturnKeyType.next
+    }
+    
+    
     func addAddressCell(_ cell: UITableViewCell) {
         let lbl = UILabel()
         let tfStreetAdd = UITextField()
@@ -59,6 +141,8 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         let tfState = UITextField()
         let tfCountry = UITextField()
         let tfZip = UITextField()
+        
+        let color1 = hexStringToUIColor(hex: "#78f5ff")
         
         lbl.translatesAutoresizingMaskIntoConstraints = false
         tfStreetAdd.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +153,7 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
 
         
         lbl.text = "Address"
+        lbl.textColor = color1
         
         tfStreetAdd.placeholder = "Street Address"
         tfStreetAdd.text = (contact["address"] as? Dictionary<String,String>)?["streetAddress"]
@@ -125,11 +210,26 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
             tfZip.trailingAnchor.constraint(equalTo: cell.trailingAnchor, constant: -17)
             
             ])
+  
         tfStreetAdd.delegate = self
+        tfStreetAdd.tag = 0
+        tfStreetAdd.returnKeyType = UIReturnKeyType.next
+        
         tfCity.delegate = self
+        tfCity.tag = 1
+        tfCity.returnKeyType = UIReturnKeyType.next
+        
         tfState.delegate = self
+        tfState.tag = 2
+        tfState.returnKeyType = UIReturnKeyType.next
+        
         tfCountry.delegate = self
+        tfCountry.tag = 3
+        tfCountry.returnKeyType = UIReturnKeyType.next
+        
         tfZip.delegate = self
+        tfZip.tag = 4
+        tfZip.returnKeyType = UIReturnKeyType.go
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -172,6 +272,29 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         }
     }
     
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.characters.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+
+    
     func getAddInfo(_ cell : UITableViewCell) -> Dictionary<String,String>{
       var dict: Dictionary<String,String> = [:]
         let allSubViews = cell.contentView.subviews
@@ -181,7 +304,7 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
             if key == "street address" {
                 key = "streetAddress"
             }
-            dict[key] = textField.text
+            dict[key] = textField.text  
         }
         return dict
     }
@@ -214,12 +337,13 @@ class NewContactController: UIViewController,UITextFieldDelegate,UIImagePickerCo
         
         // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
+        
         present(imagePickerController, animated: true, completion: nil)
         
     }
 }
 
-extension NewContactController: UITableViewDataSource {
+extension EditContactController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (tableView == self.tableViewName) ? 2 : 3
@@ -234,6 +358,7 @@ extension NewContactController: UITableViewDataSource {
             if indexPath.row == 0 {
                 cell.inputName.placeholder = "First Name"
                 cell.inputName.text = (contact["firstName"] as? String) == "0" ? "" : contact["firstName"] as? String
+                
             } else {
                 cell.inputName.placeholder = "Last Name"
                 cell.inputName.text = contact["lastName"] as? String
@@ -246,13 +371,17 @@ extension NewContactController: UITableViewDataSource {
             
             switch indexPath.row {
             case 0:
-                cell.inputInfo.text = "Phone Number"
                 cell.inputInfo.placeholder = "Phone Number"
                 if let info = contact["phoneNumber"] as? String {
                     cell.inputInfo.text = info
                 }
+//                guard let addTextField = cell.inputInfo else { break }
+//                addTextField.removeFromSuperview()
+//                addPhoneCell(cell)
             case 1:
-                cell.inputInfo.text = "Email"
+//                guard let addTextField = cell.inputInfo else {break}
+//                addTextField.removeFromSuperview()
+//                addEmailCell(cell)
                 cell.inputInfo.placeholder = "Email"
                 if let info = contact["email"] as? String {
                     cell.inputInfo.text = info
@@ -272,7 +401,7 @@ extension NewContactController: UITableViewDataSource {
 
 }
 
-extension NewContactController: UITableViewDelegate {
+extension EditContactController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if addressCellIndexPath == indexPath {

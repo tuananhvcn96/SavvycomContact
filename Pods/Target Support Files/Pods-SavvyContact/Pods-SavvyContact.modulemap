@@ -1,0 +1,6 @@
+framework module Pods_SavvyContact {
+  umbrella header "Pods-SavvyContact-umbrella.h"
+
+  export *
+  module * { export * }
+}

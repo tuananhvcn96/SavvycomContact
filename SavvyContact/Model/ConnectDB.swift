@@ -8,9 +8,6 @@
 
 import Foundation
 
-import Foundation
-
-
 class ConnectDB {
     
     private let dataFileName: String

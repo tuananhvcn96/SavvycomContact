@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D793F33FB751233A75552ABE33813B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2E947A7F8D3DC94204CB3200E734CCF8 /* NextResponderTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F565C84B1A7E68A9A5B6FF2BA84EB410 /* NextResponderTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45E460A6EA2C97DA68DB758251155E8D /* NextResponderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464883C8A9C74AE1EBA99EE2CD9FFB26 /* NextResponderTextField.swift */; };
+		7FBA1BDD50498FED32D889C272907D5D /* Pods-SavvyContact-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27DD49D0E4AA8B7D5CE174F1F3B3BED0 /* Pods-SavvyContact-dummy.m */; };
+		9D4A131077DFCB956508F1D88818F69A /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 1394BB59E966C967BE4285F554CA65A8 /* Info.plist */; };
+		DA71C9EC57CFE26AC3814756965B4150 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E8D07899C66173FDFEA00F297F254634 /* Pods-SavvyContact-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63353178015200987B0A477CAC569C8E /* Pods-SavvyContact-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF2F924AFB0084A6F7ECE916EF911CD3 /* NextResponderTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B3F1CC7C35219E63D976BEDC2B1227D /* NextResponderTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F4DCA1F6A7002564D9782A41CC197D /* NextResponderTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5064ADDE854225D42DC981D6DF7AEB /* NextResponderTextField-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13DD6511AD46A286CF9BECDC0F88EC90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6F8E273E7DBADDE69335D32F3FC4747;
+			remoteInfo = NextResponderTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1394BB59E966C967BE4285F554CA65A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/Info.plist; sourceTree = "<group>"; };
+		27B15314C0DD3ED1D6002F9A8B33ED7E /* NextResponderTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NextResponderTextField.xcconfig; sourceTree = "<group>"; };
+		27DD49D0E4AA8B7D5CE174F1F3B3BED0 /* Pods-SavvyContact-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SavvyContact-dummy.m"; sourceTree = "<group>"; };
+		2B3F1CC7C35219E63D976BEDC2B1227D /* NextResponderTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NextResponderTextField.h; path = Sources/NextResponderTextField.h; sourceTree = "<group>"; };
+		464883C8A9C74AE1EBA99EE2CD9FFB26 /* NextResponderTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NextResponderTextField.swift; path = Sources/NextResponderTextField.swift; sourceTree = "<group>"; };
+		59BD3E049C6664A9AFCBB4E45847AC14 /* Pods-SavvyContact-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SavvyContact-acknowledgements.markdown"; sourceTree = "<group>"; };
+		60D1412405B71ADBD23F14C0365803BC /* NextResponderTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextResponderTextField-prefix.pch"; sourceTree = "<group>"; };
+		63353178015200987B0A477CAC569C8E /* Pods-SavvyContact-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SavvyContact-umbrella.h"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		755D1D13F3A2E70183478B0E5B06C955 /* Pods-SavvyContact-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SavvyContact-frameworks.sh"; sourceTree = "<group>"; };
+		7A5064ADDE854225D42DC981D6DF7AEB /* NextResponderTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NextResponderTextField-dummy.m"; sourceTree = "<group>"; };
+		823D56F95FF0BBCC7C490FC1ED0F47D7 /* Pods-SavvyContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SavvyContact.release.xcconfig"; sourceTree = "<group>"; };
+		87F386016BB7B95AD54DCC597414C1EF /* Pods_SavvyContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SavvyContact.framework; path = "Pods-SavvyContact.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FDFA16FC7BEF386694A7B180CBC199C /* NextResponderTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NextResponderTextField.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		971BDF033F2D6201617DEB5337CBB27C /* NextResponderTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NextResponderTextField.framework; path = NextResponderTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F8DE1095AFB761A6DE51B76F4278D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C09E0D59C119471BAB26C72FA84F4B87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4B57C325AFC00D30765E67574C073BD /* Pods-SavvyContact-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SavvyContact-resources.sh"; sourceTree = "<group>"; };
+		E081983D0D1985B7AF129B4A2AA100CA /* Pods-SavvyContact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SavvyContact.debug.xcconfig"; sourceTree = "<group>"; };
+		EBB0E8E03F2E58CC32684F78EAB5C03B /* Pods-SavvyContact.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SavvyContact.modulemap"; sourceTree = "<group>"; };
+		EF2957DFB109BF258C611E0591E59258 /* Pods-SavvyContact-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SavvyContact-acknowledgements.plist"; sourceTree = "<group>"; };
+		F565C84B1A7E68A9A5B6FF2BA84EB410 /* NextResponderTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NextResponderTextField-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0453E114322FC4B82FDA40693E4B90F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D793F33FB751233A75552ABE33813B6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6D0FB5FB5D96616C662FD386BD532CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA71C9EC57CFE26AC3814756965B4150 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1341D5CA472629CF79AD42F729BF4375 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED0528C567541CB48A7C9C227D6DFA81 /* NextResponderTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E88F59EB1F7CEB21E7A8FAA9A787016 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6F8DE1095AFB761A6DE51B76F4278D6 /* Info.plist */,
+				8FDFA16FC7BEF386694A7B180CBC199C /* NextResponderTextField.modulemap */,
+				27B15314C0DD3ED1D6002F9A8B33ED7E /* NextResponderTextField.xcconfig */,
+				7A5064ADDE854225D42DC981D6DF7AEB /* NextResponderTextField-dummy.m */,
+				60D1412405B71ADBD23F14C0365803BC /* NextResponderTextField-prefix.pch */,
+				F565C84B1A7E68A9A5B6FF2BA84EB410 /* NextResponderTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NextResponderTextField";
+			sourceTree = "<group>";
+		};
+		4F727A9FFD9AA018F86A822F1D095142 /* Pods-SavvyContact */ = {
+			isa = PBXGroup;
+			children = (
+				C09E0D59C119471BAB26C72FA84F4B87 /* Info.plist */,
+				EBB0E8E03F2E58CC32684F78EAB5C03B /* Pods-SavvyContact.modulemap */,
+				59BD3E049C6664A9AFCBB4E45847AC14 /* Pods-SavvyContact-acknowledgements.markdown */,
+				EF2957DFB109BF258C611E0591E59258 /* Pods-SavvyContact-acknowledgements.plist */,
+				27DD49D0E4AA8B7D5CE174F1F3B3BED0 /* Pods-SavvyContact-dummy.m */,
+				755D1D13F3A2E70183478B0E5B06C955 /* Pods-SavvyContact-frameworks.sh */,
+				C4B57C325AFC00D30765E67574C073BD /* Pods-SavvyContact-resources.sh */,
+				63353178015200987B0A477CAC569C8E /* Pods-SavvyContact-umbrella.h */,
+				E081983D0D1985B7AF129B4A2AA100CA /* Pods-SavvyContact.debug.xcconfig */,
+				823D56F95FF0BBCC7C490FC1ED0F47D7 /* Pods-SavvyContact.release.xcconfig */,
+			);
+			name = "Pods-SavvyContact";
+			path = "Target Support Files/Pods-SavvyContact";
+			sourceTree = "<group>";
+		};
+		5BB1E54DCF2DC4D91DAC630F8029559C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				971BDF033F2D6201617DEB5337CBB27C /* NextResponderTextField.framework */,
+				87F386016BB7B95AD54DCC597414C1EF /* Pods_SavvyContact.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1341D5CA472629CF79AD42F729BF4375 /* Pods */,
+				5BB1E54DCF2DC4D91DAC630F8029559C /* Products */,
+				CCFCA37E0E1655CFB996D1221A47FD59 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCFCA37E0E1655CFB996D1221A47FD59 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F727A9FFD9AA018F86A822F1D095142 /* Pods-SavvyContact */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		ED0528C567541CB48A7C9C227D6DFA81 /* NextResponderTextField */ = {
+			isa = PBXGroup;
+			children = (
+				1394BB59E966C967BE4285F554CA65A8 /* Info.plist */,
+				2B3F1CC7C35219E63D976BEDC2B1227D /* NextResponderTextField.h */,
+				464883C8A9C74AE1EBA99EE2CD9FFB26 /* NextResponderTextField.swift */,
+				4E88F59EB1F7CEB21E7A8FAA9A787016 /* Support Files */,
+			);
+			name = NextResponderTextField;
+			path = NextResponderTextField;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		94C741D5C45CDA479397DD4FBAAE4966 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E947A7F8D3DC94204CB3200E734CCF8 /* NextResponderTextField-umbrella.h in Headers */,
+				EF2F924AFB0084A6F7ECE916EF911CD3 /* NextResponderTextField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7BD8C002A0BF2BC8851C0EC30AFB9E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8D07899C66173FDFEA00F297F254634 /* Pods-SavvyContact-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5B39588321164329C7F8F4D78F7BD118 /* Pods-SavvyContact */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4D15645F47AA0B497892A48CB293503 /* Build configuration list for PBXNativeTarget "Pods-SavvyContact" */;
+			buildPhases = (
+				6730112AA8D80A1BD843E31126EE6874 /* Sources */,
+				D6D0FB5FB5D96616C662FD386BD532CA /* Frameworks */,
+				F7BD8C002A0BF2BC8851C0EC30AFB9E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F44BA8DAAAD12A756D566F00A89D3CA /* PBXTargetDependency */,
+			);
+			name = "Pods-SavvyContact";
+			productName = "Pods-SavvyContact";
+			productReference = 87F386016BB7B95AD54DCC597414C1EF /* Pods_SavvyContact.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6F8E273E7DBADDE69335D32F3FC4747 /* NextResponderTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2FA1AC2A80414C2DBBFA0F91B077979 /* Build configuration list for PBXNativeTarget "NextResponderTextField" */;
+			buildPhases = (
+				B5E667E7AA3860E5AD7BB4E350EE82FB /* Sources */,
+				0453E114322FC4B82FDA40693E4B90F0 /* Frameworks */,
+				94C741D5C45CDA479397DD4FBAAE4966 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NextResponderTextField;
+			productName = NextResponderTextField;
+			productReference = 971BDF033F2D6201617DEB5337CBB27C /* NextResponderTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 5BB1E54DCF2DC4D91DAC630F8029559C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6F8E273E7DBADDE69335D32F3FC4747 /* NextResponderTextField */,
+				5B39588321164329C7F8F4D78F7BD118 /* Pods-SavvyContact */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6730112AA8D80A1BD843E31126EE6874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FBA1BDD50498FED32D889C272907D5D /* Pods-SavvyContact-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E667E7AA3860E5AD7BB4E350EE82FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4A131077DFCB956508F1D88818F69A /* Info.plist in Sources */,
+				F3F4DCA1F6A7002564D9782A41CC197D /* NextResponderTextField-dummy.m in Sources */,
+				45E460A6EA2C97DA68DB758251155E8D /* NextResponderTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F44BA8DAAAD12A756D566F00A89D3CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NextResponderTextField;
+			target = F6F8E273E7DBADDE69335D32F3FC4747 /* NextResponderTextField */;
+			targetProxy = 13DD6511AD46A286CF9BECDC0F88EC90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		661C5E5EDDA5D810F419BA84572DC07B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B15314C0DD3ED1D6002F9A8B33ED7E /* NextResponderTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NextResponderTextField/NextResponderTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NextResponderTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NextResponderTextField/NextResponderTextField.modulemap";
+				PRODUCT_NAME = NextResponderTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E838B082E4D8417A0284AD0756C767F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E081983D0D1985B7AF129B4A2AA100CA /* Pods-SavvyContact.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SavvyContact/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SavvyContact/Pods-SavvyContact.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SavvyContact;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADC1D83FA0D0C5A29644C4C4858DB5CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B15314C0DD3ED1D6002F9A8B33ED7E /* NextResponderTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/NextResponderTextField/NextResponderTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NextResponderTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NextResponderTextField/NextResponderTextField.modulemap";
+				PRODUCT_NAME = NextResponderTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E3053AB61D3E840DC674137BBF56BEE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823D56F95FF0BBCC7C490FC1ED0F47D7 /* Pods-SavvyContact.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SavvyContact/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SavvyContact/Pods-SavvyContact.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SavvyContact;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2FA1AC2A80414C2DBBFA0F91B077979 /* Build configuration list for PBXNativeTarget "NextResponderTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADC1D83FA0D0C5A29644C4C4858DB5CB /* Debug */,
+				661C5E5EDDA5D810F419BA84572DC07B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4D15645F47AA0B497892A48CB293503 /* Build configuration list for PBXNativeTarget "Pods-SavvyContact" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E838B082E4D8417A0284AD0756C767F /* Debug */,
+				E3053AB61D3E840DC674137BBF56BEE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

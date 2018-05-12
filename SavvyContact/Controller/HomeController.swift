@@ -50,35 +50,7 @@ class HomeController: UIViewController {
         allContacts4Search = Contact.getAllContactsToArr()
         tableView.reloadData()
     }
-    @IBAction func unwindToContactView(sender: UIStoryboardSegue) {
-        let sourceView = sender.source as? NewContactController
-        let contact = Contact(Dictionary: (sourceView?.contact)!)!
-        contact.setProfileImage((sourceView?.photoImageView.image)!, String(contact.getId())+".png")
-        if var grouped = Contact.getGrouped() {
-            let group = contact.getGroup()      //group cua Contact moi
-            
-            // kiem tra xem group cua contact moi da ton tai hay chua
-            if grouped.contains(group) {
-                allContacts?[group]!.append(contact)
-                allContacts?[group]?.sort {$0.getFullName() < $1.getFullName()}
-            } else {
-                grouped.append(group)
-                
-                // sort danh sach, Unkown luon o dau danh sach
-                grouped.sort() {
-                    if $0 != "Unknown" && $1 != "Unknown" {
-                        return $0 < $1
-                    } else {
-                        return false
-                    }
-                }
-                allContacts?[group] = [contact]
-            }
-            Contact.toFile(data: allContacts!,grouped: grouped,lastId: contact.getId())
-            tableView.reloadData()
-        }
-    }
-    
+       
     func scrollToNewCell(indexPath: IndexPath) {
         self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
     }
@@ -140,10 +112,6 @@ extension HomeController: UITableViewDelegate,UITableViewDataSource {
             let header = group[section]
             return header
         }
-    }
-    
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return contactString
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
