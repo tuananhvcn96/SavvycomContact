@@ -624,16 +624,10 @@
             </objects>
             <point key="canvasLocation" x="273" y="1652"/>
         </scene>
-        <!--Test View Controller-->
+        <!--New Contact View Controller-->
         <scene sceneID="AzF-TO-tHF">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="32y-Ms-VpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uvj-Qx-cwA">
-                    <connections>
-                        <action selector="tapGesture:" destination="ThC-b0-GWs" id="KV3-Zv-4wp"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <viewController id="ThC-b0-GWs" customClass="TestViewController" customModule="SavvyContact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ThC-b0-GWs" customClass="NewContactViewController" customModule="SavvyContact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oZF-Qq-jYi"/>
                         <viewControllerLayoutGuide type="bottom" id="8gx-d9-ijf"/>
@@ -646,7 +640,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell1" rowHeight="94" id="O3T-yN-Oox" customClass="NewFullNameTableViewCell" customModule="SavvyContact" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FullNameCell" rowHeight="94" id="O3T-yN-Oox" customClass="NewFullNameTableViewCell" customModule="SavvyContact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" tableViewCell="O3T-yN-Oox" id="Jij-T5-Hz8">
@@ -683,7 +677,7 @@
                                             <outlet property="lastNametest" destination="oN7-2Z-cDq" id="szQ-UG-dqE"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell2" rowHeight="50" id="F5W-8m-VrL" customClass="NewPhoneTableViewCell" customModule="SavvyContact" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PhoneCell" rowHeight="50" id="F5W-8m-VrL" customClass="NewPhoneTableViewCell" customModule="SavvyContact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="122" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F5W-8m-VrL" id="kNs-Pf-OFa">
@@ -711,7 +705,7 @@
                                             <outlet property="phoneCellTest" destination="0cC-jF-aqh" id="HAt-Th-Rx1"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell3" rowHeight="50" id="Xp1-xT-neU" customClass="NewEmailTableViewCell" customModule="SavvyContact" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmailCell" rowHeight="50" id="Xp1-xT-neU" customClass="NewEmailTableViewCell" customModule="SavvyContact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="172" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xp1-xT-neU" id="xqP-nO-LWV">
@@ -739,7 +733,7 @@
                                             <outlet property="emailCellTest" destination="Kl3-dj-jcb" id="yDZ-MV-9IF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell4" rowHeight="201" id="Izz-LU-20s" customClass="NewAddressTableViewCell" customModule="SavvyContact" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddressCell" rowHeight="201" id="Izz-LU-20s" customClass="NewAddressTableViewCell" customModule="SavvyContact" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="222" width="375" height="201"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Izz-LU-20s" id="xRK-PT-D0q">
@@ -821,13 +815,18 @@
                         <outlet property="tableView" destination="ggw-el-M2M" id="T8I-fc-M2c"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32y-Ms-VpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uvj-Qx-cwA">
+                    <connections>
+                        <action selector="tapGesture:" destination="ThC-b0-GWs" id="KV3-Zv-4wp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2124" y="-205"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="edd-tq-nY4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gf4-aw-JgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NJw-MY-4Ta" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="miI-wc-q5N">
@@ -839,6 +838,7 @@
                         <segue destination="ThC-b0-GWs" kind="relationship" relationship="rootViewController" id="ZMV-fN-kFF"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gf4-aw-JgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1167" y="-205"/>
         </scene>

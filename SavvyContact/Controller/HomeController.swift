@@ -47,12 +47,9 @@ class HomeController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         allContacts4Search = Contact.getAllContactsToArr()
         tableView.reloadData()
-    }
-       
-    func scrollToNewCell(indexPath: IndexPath) {
-        self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
     }
     
 }

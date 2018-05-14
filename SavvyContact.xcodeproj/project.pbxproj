@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B9BC289F8090B563A4553C60 /* Pods_SavvyContact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99306E506C7963F273A376D3 /* Pods_SavvyContact.framework */; };
-		CC42B99220A02D0200B8AD9B /* NewContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42B99120A02D0200B8AD9B /* NewContact.swift */; };
 		CC42B99420A02E4900B8AD9B /* NewFullNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42B99320A02E4900B8AD9B /* NewFullNameTableViewCell.swift */; };
 		CC42B99620A02EA000B8AD9B /* NewPhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42B99520A02EA000B8AD9B /* NewPhoneTableViewCell.swift */; };
 		CC42B99820A02EBF00B8AD9B /* NewEmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42B99720A02EBF00B8AD9B /* NewEmailTableViewCell.swift */; };
@@ -22,7 +21,7 @@
 		CC7103692085B67200E490A6 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7103682085B67200E490A6 /* HomeController.swift */; };
 		CC71036B2085B6B100E490A6 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71036A2085B6B100E490A6 /* Contacts.swift */; };
 		CC71036D2085DE8700E490A6 /* HumanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71036C2085DE8700E490A6 /* HumanTableViewCell.swift */; };
-		CC7B1CE320A3E6E400C8439A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1CE220A3E6E400C8439A /* TestViewController.swift */; };
+		CC7B1CE320A3E6E400C8439A /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1CE220A3E6E400C8439A /* NewContactViewController.swift */; };
 		CC7B1CE620A43D8E00C8439A /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7B1CE520A43D8E00C8439A /* HeaderCell.swift */; };
 		CC7E6A5420A73FF70093E603 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7E6A5320A73FF70093E603 /* UI.swift */; };
 		CCA8123F20883AC5008192D7 /* ConnectDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA8123E20883AC5008192D7 /* ConnectDB.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		8E8DA45ADF6555B17141AFF4 /* Pods-SavvyContact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SavvyContact.release.xcconfig"; path = "Pods/Target Support Files/Pods-SavvyContact/Pods-SavvyContact.release.xcconfig"; sourceTree = "<group>"; };
 		99306E506C7963F273A376D3 /* Pods_SavvyContact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SavvyContact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC42B99120A02D0200B8AD9B /* NewContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewContact.swift; path = Controller/NewContact.swift; sourceTree = "<group>"; };
 		CC42B99320A02E4900B8AD9B /* NewFullNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewFullNameTableViewCell.swift; path = Cell/NewFullNameTableViewCell.swift; sourceTree = "<group>"; };
 		CC42B99520A02EA000B8AD9B /* NewPhoneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewPhoneTableViewCell.swift; path = Cell/NewPhoneTableViewCell.swift; sourceTree = "<group>"; };
 		CC42B99720A02EBF00B8AD9B /* NewEmailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewEmailTableViewCell.swift; path = Cell/NewEmailTableViewCell.swift; sourceTree = "<group>"; };
@@ -52,7 +50,7 @@
 		CC7103682085B67200E490A6 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Controller/HomeController.swift; sourceTree = "<group>"; };
 		CC71036A2085B6B100E490A6 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contacts.swift; path = Model/Contacts.swift; sourceTree = "<group>"; };
 		CC71036C2085DE8700E490A6 /* HumanTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HumanTableViewCell.swift; path = Cell/HumanTableViewCell.swift; sourceTree = "<group>"; };
-		CC7B1CE220A3E6E400C8439A /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = Controller/TestViewController.swift; sourceTree = "<group>"; };
+		CC7B1CE220A3E6E400C8439A /* NewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewContactViewController.swift; path = Controller/NewContactViewController.swift; sourceTree = "<group>"; };
 		CC7B1CE520A43D8E00C8439A /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		CC7E6A5320A73FF70093E603 /* UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		CCA8123E20883AC5008192D7 /* ConnectDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectDB.swift; path = Model/ConnectDB.swift; sourceTree = "<group>"; };
@@ -146,8 +144,7 @@
 				CC7103682085B67200E490A6 /* HomeController.swift */,
 				CC42B99B20A17A8A00B8AD9B /* EditContactController.swift */,
 				CCA81249208D89A2008192D7 /* DetailViewController.swift */,
-				CC42B99120A02D0200B8AD9B /* NewContact.swift */,
-				CC7B1CE220A3E6E400C8439A /* TestViewController.swift */,
+				CC7B1CE220A3E6E400C8439A /* NewContactViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -318,10 +315,9 @@
 				CCA8123F20883AC5008192D7 /* ConnectDB.swift in Sources */,
 				CC7103692085B67200E490A6 /* HomeController.swift in Sources */,
 				CC42B99A20A02EF200B8AD9B /* NewAddressTableViewCell.swift in Sources */,
-				CC42B99220A02D0200B8AD9B /* NewContact.swift in Sources */,
 				CCA8124A208D89A2008192D7 /* DetailViewController.swift in Sources */,
 				CC42B99620A02EA000B8AD9B /* NewPhoneTableViewCell.swift in Sources */,
-				CC7B1CE320A3E6E400C8439A /* TestViewController.swift in Sources */,
+				CC7B1CE320A3E6E400C8439A /* NewContactViewController.swift in Sources */,
 				CC7E6A5420A73FF70093E603 /* UI.swift in Sources */,
 				CC42B99C20A17A8A00B8AD9B /* EditContactController.swift in Sources */,
 			);

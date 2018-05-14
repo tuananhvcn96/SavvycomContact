@@ -21,11 +21,10 @@ enum TextFieldType: Int {
     case zip = 8
 }
 
-class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class NewContactViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var btnAdd: UIBarButtonItem!
-    
+
     var contact: Dictionary<String,Any> = [:]
     var addressCellIndexPath: IndexPath?
     let addressCell: CGFloat = 215.0
@@ -41,9 +40,17 @@ class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINav
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = navigationBarItem()
         newPhoto.isUserInteractionEnabled = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FullNameCell") as! NewFullNameTableViewCell
+        
+        if !contact.isEmpty {
+            let path = contact["profileImage"] as! String
+            if path != "" {
+                cell.avatarImageView.image = UIImage(contentsOfFile: path)
+                Helper.roundImage(cell.avatarImageView)
+            }
+        }
+        cell.avatarImageView.image = newPhoto.image
         
     }
     
@@ -56,9 +63,9 @@ class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     }
     
     func onTapMenu() {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1") as! NewFullNameTableViewCell
+        
         let contact = Contact(Dictionary: self.contact)
-        contact!.setProfileImage((cell.avatarImageView.image)!, String(contact!.getId())+".png")
+        contact!.setProfileImage((newPhoto.image)!, String(contact!.getId())+".png")
         if var grouped = Contact.getGrouped() {
             let group = contact!.getGroup()
             
@@ -91,7 +98,7 @@ class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     
     func textDidChange(_ sender: UITextField) {
         
-        guard let type = TextFIeldType(rawValue: sender.tag) else { return }
+        guard let type = TextFieldType(rawValue: sender.tag) else { return }
 
         switch type {
         case .firstN:
@@ -129,6 +136,16 @@ class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     func scrollToNewCell(indexPath: IndexPath) {
         self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
+    }
 
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         let imagePickerController = UIImagePickerController()
@@ -160,7 +177,7 @@ class TestViewController: UIViewController,UIImagePickerControllerDelegate,UINav
     }
 }
 
-extension TestViewController: UITableViewDelegate,UITableViewDataSource {
+extension NewContactViewController: UITableViewDelegate,UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -171,62 +188,68 @@ extension TestViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as? NewFullNameTableViewCell {
-                cell.lastNametest.tag = TextFIeldType.lastN.rawValue
-                cell.fristnameTest.tag = TextFIeldType.firstN.rawValue
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "FullNameCell", for: indexPath) as? NewFullNameTableViewCell {
+                cell.lastNametest.tag = TextFieldType.lastN.rawValue
+                cell.fristnameTest.tag = TextFieldType.firstN.rawValue
                 
                 cell.lastNametest.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
                 cell.fristnameTest.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                
-                if !contact.isEmpty {
-                    let path = contact["profileImage"] as! String
-                    if path != "" {
-                        cell.avatarImageView.image = UIImage(contentsOfFile: path)
-                        Helper.roundImage(cell.avatarImageView)
-                    }
-                }
-                cell.avatarImageView.image = newPhoto.image
                 
                 if newPhoto.image != nil {
                     cell.avatarImageView.image = newPhoto.image
                     Helper.roundImage(cell.avatarImageView)
                 }
-
+                
+                cell.fristnameTest.delegate = self
+                cell.fristnameTest.tag = 0
+                cell.fristnameTest.returnKeyType = UIReturnKeyType.next
+                
+                cell.lastNametest.delegate = self
+                cell.lastNametest.tag = 1
+                cell.lastNametest.returnKeyType = UIReturnKeyType.next
                 
                 return cell
             }
         } else if indexPath.section == 1{
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as? NewPhoneTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneCell", for: indexPath) as? NewPhoneTableViewCell {
                 
                 cell.phoneCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.phoneCell.tag = TextFIeldType.phone.rawValue
+                cell.phoneCell.tag = TextFieldType.phone.rawValue
+                
+                cell.phoneCell.delegate = self
+                cell.phoneCell.tag = 2
+                cell.phoneCell.returnKeyType = UIReturnKeyType.next
                 return cell
             }
         } else if indexPath.section == 2{
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as? NewEmailTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "EmailCell", for: indexPath) as? NewEmailTableViewCell {
                 
                 cell.emailCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.emailCell.tag = TextFIeldType.email.rawValue
+                cell.emailCell.tag = TextFieldType.email.rawValue
+                
+                cell.emailCell.delegate = self
+                cell.emailCell.tag = 3
+                cell.emailCell.returnKeyType = UIReturnKeyType.go
                 
                 return cell
             }
         } else {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath) as? NewAddressTableViewCell {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as? NewAddressTableViewCell {
                 
                 cell.streetAddressCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.streetAddressCell.tag = TextFIeldType.street.rawValue
+                cell.streetAddressCell.tag = TextFieldType.street.rawValue
                 
                 cell.cityCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.cityCell.tag = TextFIeldType.city.rawValue
+                cell.cityCell.tag = TextFieldType.city.rawValue
                 
                 cell.stateCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.stateCell.tag = TextFIeldType.state.rawValue
+                cell.stateCell.tag = TextFieldType.state.rawValue
                 
                 cell.countryCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.countryCell.tag = TextFIeldType.country.rawValue
+                cell.countryCell.tag = TextFieldType.country.rawValue
                 
                 cell.zipCell.addTarget(self, action: #selector(self.textDidChange(_:)), for: .editingChanged)
-                cell.zipCell.tag = TextFIeldType.zip.rawValue
+                cell.zipCell.tag = TextFieldType.zip.rawValue
                 
                 return cell
             }

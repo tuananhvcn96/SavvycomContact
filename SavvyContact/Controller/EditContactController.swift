@@ -264,7 +264,7 @@ class EditContactController: UIViewController,UITextFieldDelegate,UIImagePickerC
                     break
                 }
                 if key != "address" {
-                    contact[key] = cells[i].inputInfo.text == cells[i].inputInfo.placeholder ? "" : cells[i].inputInfo.text
+                    
                 } else {
                     contact[key] = getAddInfo(cells[i])
                 }
@@ -371,21 +371,19 @@ extension EditContactController: UITableViewDataSource {
             
             switch indexPath.row {
             case 0:
-                cell.inputInfo.placeholder = "Phone Number"
-                if let info = contact["phoneNumber"] as? String {
-                    cell.inputInfo.text = info
-                }
-//                guard let addTextField = cell.inputInfo else { break }
-//                addTextField.removeFromSuperview()
-//                addPhoneCell(cell)
+//                if let info = contact["phoneNumber"] as? String {
+//                    cell.inputInfo.text = info
+//                }
+                guard let addTextField = cell.inputInfo else { break }
+                addTextField.removeFromSuperview()
+                addPhoneCell(cell)
             case 1:
-//                guard let addTextField = cell.inputInfo else {break}
-//                addTextField.removeFromSuperview()
-//                addEmailCell(cell)
-                cell.inputInfo.placeholder = "Email"
-                if let info = contact["email"] as? String {
-                    cell.inputInfo.text = info
-                }
+                guard let addTextField = cell.inputInfo else {break}
+                addTextField.removeFromSuperview()
+                addEmailCell(cell)
+//                if let info = contact["email"] as? String {
+//                    cell.inputInfo.text = info
+//                }
             case 2:
                 addressCellIndexPath = indexPath
                 guard let addTextField = cell.inputInfo else {break}
